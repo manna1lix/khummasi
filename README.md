@@ -236,7 +236,7 @@ cinematography and graphic design work — lives on my portfolio:
 | | |
 | --- | --- |
 | **Email** | [manna.faraj.dev@gmail.com](mailto:manna.faraj.dev@gmail.com) |
-| **Phone** | +218 XX XXX XXXX |
+| **Phone** | +218 910628025 |
 | **GitHub** | [@manna1lix](https://github.com/manna1lix) |
 | **LinkedIn** | [Manna Faraj Manna](https://www.linkedin.com/in/manna-faraj-783b85195) |
 | **Portfolio** | [manna-portfolio.web.app](https://manna-portfolio.web.app) |
