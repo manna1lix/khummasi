@@ -21,3 +21,7 @@ node_modules/
 dist/
 .DS_Store
 Thumbs.db
+
+# Resume build tooling — the template embeds personal contact details, and
+# the generated PDF is distributed via the portfolio site, not this repo.
+resume/
