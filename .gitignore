@@ -1,0 +1,23 @@
+# The portfolio site source is private and deliberately NOT published here.
+# The folder stays on disk (it is what deploys to Firebase Hosting) but is
+# never tracked by this public repository.
+portfolio/
+
+# Never publish personal documents or credentials.
+*.pdf
+*.docx
+*.doc
+generate_cv.py
+GEMINI.md
+open-source-components/
+
+.env
+.env.*
+*.pem
+*.key
+serviceAccount*.json
+
+node_modules/
+dist/
+.DS_Store
+Thumbs.db
