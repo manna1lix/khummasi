@@ -19,7 +19,7 @@
 
 ## Contents
 
-1. [Video Walkthrough](#-video-walkthrough)
+1. [The Film](#-the-film)
 2. [Scale & Metrics](#-scale--metrics)
 3. [Architecture & Data Flow](#️-architecture--data-flow)
 4. [Complete Tech Stack](#️-complete-tech-stack)
@@ -30,11 +30,13 @@
 
 ---
 
-## 🎬 Video Walkthrough
+## 🎬 The Film
 
-> **[▶️ Watch the 5-Minute Technical Walkthrough on YouTube / Loom](link-to-your-video)**
+<a href="./film/khummasi-story.mp4"><img src="./film/khummasi-story-poster.jpg" alt="Watch the Khummasi film" width="100%" /></a>
 
-*(Watch the video to see the full Player, Owner, and Admin experiences, including live RTL flipping and realtime push notifications.)*
+**[▶️ Watch the film (70 s, 1080p)](./film/khummasi-story.mp4)** · or on the [live portfolio](https://manna-portfolio.web.app/#khummasi)
+
+One real match, played through the app on demo accounts: a player books a pitch, the owner accepts, ten players join, the result is recorded, everyone votes for Man of the Match, his card moves up a tier, and six months later he is first on the leaderboard. Every screen in it is the real app.
 
 ---
 
@@ -134,27 +136,39 @@ Building a multi-sided marketplace solo requires aggressive scope management and
 
 ### The Player Experience (Mobile)
 <div align="center">
-  <img src="./screenshots/player-Home-screen.jpg" width="30%" />
-  <img src="./screenshots/player-Squad-screen.jpg" width="30%" />
-  <img src="./screenshots/player-matches-screen.jpg" width="30%" />
+  <img src="./screenshots/app/en-dark-home.webp" width="15.5%" alt="Home" />
+  <img src="./screenshots/app/en-dark-profile.webp" width="15.5%" alt="Player card" />
+  <img src="./screenshots/app/en-dark-booking.webp" width="15.5%" alt="Booking" />
+  <img src="./screenshots/app/en-dark-squad-pitch.webp" width="15.5%" alt="Squad on the pitch" />
+  <img src="./screenshots/app/en-dark-match.webp" width="15.5%" alt="Match" />
+  <img src="./screenshots/app/en-dark-leaderboard.webp" width="15.5%" alt="Leaderboard" />
 </div>
-<br/>
+
+### Arabic, right-to-left
+Every screen ships in Arabic and English, in light and dark. The Arabic layout is set per screen, not mirrored wholesale.
 <div align="center">
-  <img src="./screenshots/player-profile-EN.jpg" width="30%" />
-  <img src="./screenshots/player-profile-AR.jpg" width="30%" />
-  <img src="./screenshots/player-leader-board-screen.jpg" width="30%" />
+  <img src="./screenshots/app/ar-light-home.webp" width="15.5%" alt="Home in Arabic" />
+  <img src="./screenshots/app/ar-light-profile.webp" width="15.5%" alt="Player card in Arabic" />
+  <img src="./screenshots/app/ar-light-pitch-details.webp" width="15.5%" alt="Pitch details in Arabic" />
+  <img src="./screenshots/app/ar-light-map.webp" width="15.5%" alt="Map in Arabic" />
+  <img src="./screenshots/app/ar-light-player.webp" width="15.5%" alt="Another player's card in Arabic" />
+  <img src="./screenshots/app/ar-light-guide.webp" width="15.5%" alt="How it works in Arabic" />
+</div>
+
+### The Card
+REP from matches, goals and Man of the Match votes moves the card through 16 tiers. These are the real card at seven of them.
+<div align="center">
+  <img src="./screenshots/app/card-tiers.webp" width="100%" alt="The player card at seven tiers" />
 </div>
 
 ### The Owner Experience (Mobile)
 <div align="center">
-  <img src="./screenshots/owner-dashboard.jpg" width="30%" />
-  <img src="./screenshots/owner-pitch.jpg" width="30%" />
-  <img src="./screenshots/owner-booking.jpg" width="30%" />
-</div>
-<br/>
-<div align="center">
-  <img src="./screenshots/owner-dept.jpg" width="30%" />
-  <img src="./screenshots/owner-profile.jpg" width="30%" />
+  <img src="./screenshots/app/en-light-owner-dashboard.webp" width="15.5%" alt="Owner dashboard" />
+  <img src="./screenshots/app/en-light-owner-calendar.webp" width="15.5%" alt="Schedule" />
+  <img src="./screenshots/app/en-light-owner-debts.webp" width="15.5%" alt="Debts" />
+  <img src="./screenshots/app/en-light-owner-stats.webp" width="15.5%" alt="Reports" />
+  <img src="./screenshots/app/en-light-owner-pitches.webp" width="15.5%" alt="My pitches" />
+  <img src="./screenshots/app/en-light-owner-add-pitch.webp" width="15.5%" alt="Add a pitch" />
 </div>
 
 ---
