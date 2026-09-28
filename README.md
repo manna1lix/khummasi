@@ -3,7 +3,7 @@
 
   # Khummasi (خماسي) — Sports Booking Platform
   
-  **Solo Full-Stack Architect & Engineer** | **6+ Months** | **Production-Ready**
+  **Solo Full-Stack Architect & Engineer** | **11+ Months** | **Production-Ready**
   
   [![React Native](https://img.shields.io/badge/React_Native-0.81.5-blue.svg?logo=react)](https://reactnative.dev/)
   [![Expo](https://img.shields.io/badge/Expo-54.0-black.svg?logo=expo)](https://expo.dev/)
@@ -32,11 +32,24 @@
 
 ## 🎬 The Film
 
-<a href="./film/khummasi-story.mp4"><img src="./film/khummasi-story-poster.jpg" alt="Watch the Khummasi film" width="100%" /></a>
+One real match, played through the app on demo accounts. Every screen is the real app.
 
-**[▶️ Watch the film (70 s, 1080p)](./film/khummasi-story.mp4)** · or on the [live portfolio](https://manna-portfolio.web.app/#khummasi)
+<table>
+<tr>
+<td width="50%"><img src="./film/01-book.gif" alt="He books a pitch" width="100%" /><br/><sub><b>1.</b> A player books a pitch for 19:00.</sub></td>
+<td width="50%"><img src="./film/02-owner-accepts.gif" alt="The owner accepts" width="100%" /><br/><sub><b>2.</b> The owner accepts. The player sees it confirmed.</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="./film/03-kick-off.gif" alt="Ten players, kick-off" width="100%" /><br/><sub><b>3.</b> Ten players join. The lineup fills the pitch.</sub></td>
+<td width="50%"><img src="./film/04-everyone-votes.gif" alt="Everyone votes" width="100%" /><br/><sub><b>4.</b> Full time, 4–2. Everyone votes for Man of the Match.</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="./film/05-new-tier.gif" alt="A new tier" width="100%" /><br/><sub><b>5.</b> He wins it. REP goes up and his card moves up a tier.</sub></td>
+<td width="50%"><img src="./film/06-six-months.gif" alt="Six months later" width="100%" /><br/><sub><b>6.</b> Six months of matches later, the card reaches the top tier.</sub></td>
+</tr>
+</table>
 
-One real match, played through the app on demo accounts: a player books a pitch, the owner accepts, ten players join, the result is recorded, everyone votes for Man of the Match, his card moves up a tier, and six months later he is first on the leaderboard. Every screen in it is the real app.
+**[▶️ Watch the full 70-second film on the live portfolio](https://manna-portfolio.web.app/#khummasi)**
 
 ---
 
@@ -46,13 +59,13 @@ I built this entire 4-platform ecosystem from zero to production as the sole dev
 
 | Metric | Value |
 |---|---|
-| **Mobile Screens** | 53 (Player, Owner, Auth, Detail views) |
-| **Admin Dashboard** | 19 routes / 23 screens, 3-tier RBAC, TOTP MFA |
-| **Custom UI Components** | ~100 (Custom Neo-Surface design system) |
-| **Backend Endpoints** | 157 distinct REST endpoints |
+| **Mobile Screens** | 57 (Player, Owner, Auth, Detail views) |
+| **Admin Dashboard** | 22 routes / 21 pages, 3-tier RBAC, TOTP MFA |
+| **Custom UI Components** | ~120 (Custom Neo-Surface design system) |
+| **Backend Endpoints** | 161 distinct REST endpoints |
 | **Cloud Functions** | 5 (Firestore triggers + automated sweeps) |
-| **Security Rules** | 21KB (498 lines) of custom RBAC Firestore rules |
-| **Database Indexes** | 29 composite Firestore indexes |
+| **Security Rules** | 23KB (540 lines) of custom RBAC Firestore rules |
+| **Database Indexes** | 31 composite Firestore indexes |
 | **Languages** | Native bilingual support (English + Arabic RTL) |
 | **User Roles** | 4 (Player, Owner, Staff, Admin) |
 
@@ -76,14 +89,14 @@ flowchart TD
     %% Firebase Layer
     subgraph Cloud["Firebase Layer"]
         FA["Firebase Auth"]
-        FS["Cloud Firestore<br>(21KB Security Rules)"]
+        FS["Cloud Firestore<br>(23KB Security Rules)"]
         FCM["Cloud Messaging<br>(Push Notifications)"]
         CF["Cloud Functions<br>(Event Triggers)"]
     end
 
     %% Backend Layer
     subgraph VPS["VPS Backend (Node.js)"]
-        API["Express 5 API<br>(157 Endpoints)"]
+        API["Express 5 API<br>(161 Endpoints)"]
         TS["Typesense<br>(Search Index)"]
         DISK["Local Disk<br>(Image Uploads)"]
         CRON["node-cron<br>(Match sweeps & cleanup)"]
@@ -128,7 +141,7 @@ Building a multi-sided marketplace solo requires aggressive scope management and
 
 *Highlights include:*
 - **The Integrity Court:** Building adversarial test harnesses to storm my own booking endpoints.
-- **RBAC without a Microservice:** Delegating access using 498 lines of Firestore Security Rules.
+- **RBAC without a Microservice:** Delegating access using 540 lines of Firestore Security Rules.
 - **Leaflet-in-WebView:** Bypassing native map limitations for a highly customized explore map.
 - **The RTL Double-Flip:** Solving complex internationalization layout bugs.
 
@@ -175,8 +188,8 @@ REP from matches, goals and Man of the Match votes moves the card through 16 tie
 
 ## 🛡️ The Command Center (Admin Dashboard)
 
-The dashboard is the largest single surface in the platform — **19 routes across
-23 screens**, and the control plane for everything the mobile apps can't do
+The dashboard is the largest single surface in the platform — **22 routes across
+21 pages**, and the control plane for everything the mobile apps can't do
 themselves. It is not a CRUD table over Firestore; it is a moderation, finance,
 and operations console with its own permission model.
 

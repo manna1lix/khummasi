@@ -1,6 +1,6 @@
 # Engineering Deep Dives
 
-Building Khummasi single-handedly meant acting as the Product Manager, Lead Designer, Mobile Engineer, and Backend Architect simultaneously. Below are the six hardest technical challenges I solved during the 6+ months of development.
+Building Khummasi single-handedly meant acting as the Product Manager, Lead Designer, Mobile Engineer, and Backend Architect simultaneously. Below are the six hardest technical challenges I solved during 11+ months of development.
 
 ---
 
@@ -37,7 +37,7 @@ By utilizing deterministic slot locking (`pitches/{id}/schedule/{date}_{time}`) 
 Khummasi has four distinct user roles: Player, Owner, Staff, and Admin (with three sub-tiers: support, standard, super). Building a dedicated authentication microservice for routing these roles would have significantly increased hosting costs and latency.
 
 **The Solution:**
-I engineered an access control system entirely within Firestore Security Rules (21KB, 498 lines of code).
+I engineered an access control system entirely within Firestore Security Rules (23KB, 540 lines of code).
 For Staff who manage pitches on behalf of turf owners, I implemented a delegated `effectiveOwnerId` pattern. When a Staff member logs in, their token grants them read/write access to the specific Owner's pitches, completely contained within the Firebase rules layer. The admin dashboard consumes a separate `admin_roles` collection to selectively render UI components based on the admin's tier.
 
 ---
@@ -60,7 +60,7 @@ I pass coordinates between the React Native thread and the WebView via injected 
 Khummasi is fully bilingual (English and Arabic). When switching to Arabic (RTL), React Native's `I18nManager` automatically flips layouts that use `flexDirection: 'row'`. However, in early development, I was manually reversing rows in the code when Arabic was active. This resulted in a "double-flip"—the native engine flipped my already-flipped row, completely breaking the UI.
 
 **The Solution:**
-I audited all ~100 components to remove manual RTL overrides. Instead, I strictly adhered to using `start` and `end` (e.g., `paddingStart`, `alignItems: 'flex-start'`) rather than `left` and `right`. I built a global layout system that trusts the native engine to handle the mirroring, resulting in a flawless transition between LTR and RTL that required significantly less code.
+I audited all ~120 components to remove manual RTL overrides. Instead, I strictly adhered to using `start` and `end` (e.g., `paddingStart`, `alignItems: 'flex-start'`) rather than `left` and `right`. I built a global layout system that trusts the native engine to handle the mirroring, resulting in a flawless transition between LTR and RTL that required significantly less code.
 
 ---
 
